@@ -1,0 +1,83 @@
+﻿@model List<MvcApplication2.Models.Booking>
+@{
+    ViewBag.Title = "Bookings";
+}
+@{
+    Layout = "~/Views/Shared/_AminLayout.cshtml";
+}
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2 class="page-title">Users</h2>
+
+                    <!-- Zero Configuration Table -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading"></div>
+                        <div class="panel-body">
+                            <table id="users" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Party</th>
+                                        <th>Theme</th>
+                                        <th>Date</th>
+                                        <th>Cake</th>
+                                        <th>Food Course</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Update</th>
+                                        
+                                        
+                                        <th>Cancel</th>
+                                    </tr>
+                                </thead>
+                                @foreach (var b in Model)
+                                {
+                                    <tr>
+                                        <td>@b.Id</td>
+                                        <td>@b.party</td>
+                                        <td>@b.theme</td>
+                                        <td>@b.date</td>
+                                        <td>@b.cake</td>
+                                        <td>@b.course</td>
+                                        <td>@b.name</td>
+                                        <td>@b.email</td>
+                                        <td>@b.mobile</td>
+                                        <td>@Html.ActionLink("Update", "Update", "Admin")</td>                                      
+                                        
+                                        <td>@Html.ActionLink("Cancel", "Cancel", "Admin")</td>
+                                        
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Loading Scripts -->
+    <script src="~/Scripts/Admin/jquery.min.js"></script>
+    <script src="~/Scripts/Admin/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/Admin/bootstrap.min.js"></script>
+    <script src="~/Scripts/Admin/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Admin/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/Admin/Chart.min.js"></script>
+    <script src="~/Scripts/Admin/fileinput.js"></script>
+    <script src="~/Scripts/Admin/chartData.js"></script>
+    <script src="~/Scripts/Admin/main.js"></script>
+
+</body>
+
+
+
+

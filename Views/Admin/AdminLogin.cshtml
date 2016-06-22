@@ -1,0 +1,53 @@
+﻿@model MvcApplication2.Models.Admin
+@{
+    ViewBag.Title = "AdminLogin";
+}
+@{
+    Layout = null;
+    Layout = "~/Views/Shared/adminLoginLayout.cshtml";
+}
+<body>
+
+    <div class="login-page bk-img" style="background-image: url(/images/login-bg.jpg); ">
+        <div class="form-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <h1 class="text-center text-bold text-light mt-4x">Sign in</h1>
+                        <div class="well row pt-2x pb-3x bk-light">
+                            <div class="col-md-8 col-md-offset-2">
+                                <form action="~/Admin/Admin_Layout" class="mt">
+                                    <label for="" class="text-uppercase text-sm">Your Username</label>
+                                    <input type="text" placeholder="Username" class="form-control mb" name="username">
+                                    <label for="" class="text-uppercase text-sm">Password</label>
+                                    <input type="password" placeholder="Password" class="form-control mb" name="pwd">
+                                    <div class="checkbox checkbox-circle checkbox-info">
+                                        <input id="checkbox7" type="checkbox" checked>
+                                        <label for="checkbox7">
+                                            Keep me signed in
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary btn-block" type="submit">LOGIN</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="text-center text-light">
+                            <a href="#" class="text-light">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Scripts -->
+    <script src="~/Scripts/AdminLogin/jquery.min.js"></script>
+    <script src="~/Scripts/AdminLogin/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/AdminLogin/bootstrap.min.js"></script>
+    <script src="~/Scripts/AdminLogin/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/AdminLogin/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/AdminLogin/Chart.min.js"></script>
+    <script src="~/Scripts/AdminLogin/fileinput.js"></script>
+    <script src="~/Scripts/AdminLogin/chartData.js"></script>
+    <script src="~/Scripts/AdminLogin/main.js"></script>
+</body>

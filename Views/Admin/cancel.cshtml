@@ -1,0 +1,76 @@
+﻿@model MvcApplication2.Models.Booking
+@{
+    ViewBag.Title = "cancel";
+}
+@{
+    Layout = "~/Views/Shared/_AminLayout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+
+        <h2 class="page-title">Cancel Booking</h2>
+
+        <form action="/Admin/cancelBooking" method="post">
+            ID<input type="text" name="Id" id="Id" /><br><br>
+
+            <input type="submit" value="Cancel booking" />
+        </form>
+    </div>
+</div>
+
+<!-- Loading Scripts -->
+<script src="~/Scripts/Admin/jquery.min.js"></script>
+<script src="~/Scripts/Admin/bootstrap-select.min.js"></script>
+<script src="~/Scripts/Admin/bootstrap.min.js"></script>
+<script src="~/Scripts/Admin/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/Admin/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/Admin/Chart.min.js"></script>
+<script src="~/Scripts/Admin/fileinput.js"></script>
+<script src="~/Scripts/Admin/chartData.js"></script>
+<script src="~/Scripts/Admin/main.js"></script>
+
+<script>
+
+    window.onload = function () {
+
+        // Line chart from swirlData
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        window.myLine = new Chart(ctx).Line(swirlData, {
+            responsive: true,
+            scaleShowVerticalLines: false,
+            scaleBeginAtZero: true,
+            multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+        });
+
+        // Radar Chart from radarData
+        var doctx = document.getElementById("chart-area").getContext("2d");
+        window.myDoughnut = new Chart(doctx).Radar(radarData, { responsive: true });
+
+        // PolarArea from polarData
+        var doctx = document.getElementById("chart-area2").getContext("2d");
+        window.myDoughnut = new Chart(doctx).PolarArea(polarData, { responsive: true });
+
+        // Pie Chart from doughutData
+        var doctx = document.getElementById("chart-area3").getContext("2d");
+        window.myDoughnut = new Chart(doctx).Pie(doughnutData, { responsive: true });
+
+        // Dougnut Chart from doughnutData
+        var doctx = document.getElementById("chart-area4").getContext("2d");
+        window.myDoughnut = new Chart(doctx).Doughnut(doughnutData, { responsive: true });
+
+        // Bar Chart from barChartData
+        var ctx = document.getElementById("chart-bar").getContext("2d");
+        window.myBar = new Chart(ctx).Bar(barChartData, {
+            responsive: true
+        });
+
+
+    }
+
+
+</script>
+</body>
+
+</html>

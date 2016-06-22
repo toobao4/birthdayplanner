@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+@{
+    Layout = "~/Views/Shared/_AminLayout.cshtml";
+}
+
+<body>
+
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <h2 class="page-title">Update</h2>
+
+            <form action="/Admin/UpdateBooking" method="post">
+                Id <input type="text" name="Id" id="Id" /><br><br>
+                Mobile <input type="text" name="mobile"id="mobile" /><br><br>
+
+                <input type="submit" value="Update" />
+            </form>
+
+           
+        </div>
+    </div>
+
+
+    <!-- Loading Scripts -->
+    <script src="~/Scripts/Admin/jquery.min.js"></script>
+    <script src="~/Scripts/Admin/bootstrap-select.min.js"></script>
+    <script src="~/Scripts/Admin/bootstrap.min.js"></script>
+    <script src="~/Scripts/Admin/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Admin/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/Admin/Chart.min.js"></script>
+    <script src="~/Scripts/Admin/fileinput.js"></script>
+    <script src="~/Scripts/Admin/chartData.js"></script>
+    <script src="~/Scripts/Admin/main.js"></script>
+
+</body>
+
+
